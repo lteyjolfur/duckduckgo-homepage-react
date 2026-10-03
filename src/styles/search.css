@@ -52,11 +52,15 @@
   z-index: 1;
   position: relative;
   top: -1px;
-  color: var(--bg-secondary);
+  color: var(--fg-primary);
+  min-width: 0;
+  width: 100%;
+  text-overflow: ellipsis;
 }
 
 .search-input::placeholder {
   color: var(--fg-placeholder);
+  text-overflow: ellipsis;
 }
 
 .search-button {

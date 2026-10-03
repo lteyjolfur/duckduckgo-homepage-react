@@ -93,7 +93,7 @@ export default function AboutPage({
           <h2 id="performance-title">Performance</h2>
           <ul>
             <li>Performance: 100</li>
-            <li>Accessibility: 96</li>
+            <li>Accessibility: 100</li>
             <li>Best Practices: 100</li>
             <li>SEO: 100</li>
           </ul>
