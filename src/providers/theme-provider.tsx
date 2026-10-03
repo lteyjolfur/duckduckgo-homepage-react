@@ -17,14 +17,20 @@ const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 const THEME_KEY = 'theme';
 const DEFAULT_THEME = 'light';
 
+function isTheme(value: unknown): value is Theme {
+  return value === 'light' || value === 'dark';
+}
+
 function readInitialTheme(): Theme {
   try {
     const stored = localStorage.getItem(THEME_KEY);
-    if (stored) return stored as Theme;
+    if (isTheme(stored)) return stored;
   } catch (e) {}
-  // fallback to body attribute if present (useful for non-React consumers)
+  // the inline script in index.html resolves saved/system theme onto <html>
+  const rootAttr = document.documentElement.dataset.theme;
+  if (isTheme(rootAttr)) return rootAttr;
   const bodyAttr = document.body.getAttribute('data-theme');
-  return (bodyAttr as Theme) || DEFAULT_THEME;
+  return isTheme(bodyAttr) ? bodyAttr : DEFAULT_THEME;
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -34,6 +40,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     try {
       localStorage.setItem(THEME_KEY, theme);
     } catch (e) {}
+    document.documentElement.dataset.theme = theme;
     document.body.setAttribute('data-theme', theme);
   }, [theme]);
 
