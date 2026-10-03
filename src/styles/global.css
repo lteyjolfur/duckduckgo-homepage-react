@@ -8,6 +8,8 @@
   --bg-secondary: #fff;
   --fg-secondary: #333;
   --fg-placeholder: rgba(0, 0, 0, 0.54);
+  --search-text: var(--fg-primary);
+  --link-primary: #1a5fb4;
   --border-primary: #ccc;
 }
 
@@ -19,6 +21,8 @@
     --bg-secondary: #333333;
     --fg-secondary: #eeeeee;
     --fg-placeholder: rgba(255, 255, 255, 0.54);
+    --search-text: var(--fg-primary);
+    --link-primary: #8ab8ff;
     --border-primary: #444;
     --icon-primary: #aaa;
   }
@@ -30,8 +34,10 @@ body[data-theme='light'] {
   --fg-primary: #000000;
   --icon-primary: #aaa;
   --bg-secondary: #fff;
-  --fg-secondary: #aaa;
+  --fg-secondary: #333;
   --fg-placeholder: rgba(0, 0, 0, 0.54);
+  --search-text: var(--fg-primary);
+  --link-primary: #1a5fb4;
   --border-primary: #ccc;
 }
 
@@ -41,6 +47,8 @@ body[data-theme='dark'] {
   --bg-secondary: #333;
   --fg-secondary: #eeeeee;
   --fg-placeholder: rgba(255, 255, 255, 0.54);
+  --search-text: var(--fg-primary);
+  --link-primary: #8ab8ff;
   --border-primary: #444;
   --icon-primary: #aaa;
 }
