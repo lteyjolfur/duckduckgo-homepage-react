@@ -46,6 +46,6 @@ a:focus-visible {
   margin-right: 0.5rem;
 }
 
-.moon {
-  color: var(--fg-secondary);
+.darkmode-toggle {
+  color: var(--icon-primary);
 }
