@@ -118,7 +118,6 @@ export default function AboutPage({
             <li>More robust accessibility testing</li>
             <li>Additional recreated homepage sections</li>
             <li>Visual regression comparisons</li>
-            <li>Tests</li>
           </ul>
         </section>
 
