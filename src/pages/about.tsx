@@ -93,7 +93,7 @@ export default function AboutPage({
           <h2 id="performance-title">Performance</h2>
           <ul>
             <li>Performance: 100</li>
-            <li>Accessibility: 96</li>
+            <li>Accessibility: 100</li>
             <li>Best Practices: 100</li>
             <li>SEO: 100</li>
           </ul>
@@ -118,7 +118,6 @@ export default function AboutPage({
             <li>More robust accessibility testing</li>
             <li>Additional recreated homepage sections</li>
             <li>Visual regression comparisons</li>
-            <li>Tests</li>
           </ul>
         </section>
 

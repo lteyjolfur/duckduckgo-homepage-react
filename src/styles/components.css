@@ -35,6 +35,11 @@ a:focus-visible {
   cursor: pointer;
 }
 
+.download-button:hover,
+.download-button:focus-visible {
+  text-decoration: none;
+}
+
 @media (max-width: 400px) {
   .download-button {
     width: 100%;
