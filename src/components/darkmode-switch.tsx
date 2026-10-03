@@ -13,11 +13,7 @@ export default function DarkmodeSwitch() {
       aria-label="Toggle dark mode"
       aria-pressed={isDark}
     >
-      {isDark ? (
-        <FiSun strokeWidth={3} />
-      ) : (
-        <FiMoon strokeWidth={3} />
-      )}{' '}
+      {isDark ? <FiSun strokeWidth={3} /> : <FiMoon strokeWidth={3} />}{' '}
     </button>
   );
 }

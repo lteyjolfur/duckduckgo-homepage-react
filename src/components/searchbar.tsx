@@ -31,7 +31,9 @@ const Searchbar = () => {
           type="text"
           name="q"
           placeholder={
-            isSmall ? 'Search privately' : 'Search the web without being tracked'
+            isSmall
+              ? 'Search privately'
+              : 'Search the web without being tracked'
           }
           aria-label="Search the web without being tracked"
         />

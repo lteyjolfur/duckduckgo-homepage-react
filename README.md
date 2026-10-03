@@ -1,5 +1,7 @@
 # DuckDuckGo-inspired Search Homepage
 
+[![CI](https://github.com/lteyjolfur/duckduckgo-homepage-react/actions/workflows/ci.yml/badge.svg)](https://github.com/lteyjolfur/duckduckgo-homepage-react/actions/workflows/ci.yml)
+
 A small frontend project inspired by DuckDuckGo’s 2023 homepage design.
 
 This app recreates the look and feel of the landing page with a minimal React + TypeScript implementation. Search queries are redirected to DuckDuckGo, so the project focuses on UI, layout, and interaction rather than building a custom search backend.
@@ -29,6 +31,7 @@ https://duck-duck-go-green.vercel.app/
 - Vite
 - CSS
 - Vercel Analytics
+- Vitest + Testing Library, ESLint, Prettier, GitHub Actions
 
 ## How It Works
 
@@ -58,7 +61,7 @@ Focus was placed on keeping the bundle lightweight and maintaining good accessib
 Lighthouse (deployed):
 
 - Performance: 100
-- Accessibility: 96
+- Accessibility: 100
 - Best Practices: 100
 - SEO: 100
 
@@ -82,6 +85,17 @@ npm run dev
 
 Then open the local Vite development URL in your browser.
 
+## Checks
+
+```bash
+npm run typecheck
+npm run lint
+npm run format:check
+npm test
+```
+
+The same checks, plus a production build and `npm audit`, run in GitHub Actions on every pull request.
+
 ## Build
 
 ```bash
@@ -94,7 +108,6 @@ npm run preview
 - Add more robust accessibility testing
 - Expand the recreated homepage sections
 - Add visual regression screenshots for comparison
-- Tests
 
 ## Dark Mode
 
