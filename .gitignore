@@ -4,7 +4,6 @@
 # testing
 /coverage
 
-<<<<<<< HEAD
 # build output
 /dist
 
@@ -16,24 +15,10 @@
 # logs and caches
 *.log
 *.tsbuildinfo
-=======
-# production
-/build
-/dist
->>>>>>> origin/main
 
 # misc
 .DS_Store
 
-<<<<<<< HEAD
 # local tooling
 .claude/settings.local.json
 .claude/worktrees/
-=======
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# vite build output
-/dist
->>>>>>> origin/main
