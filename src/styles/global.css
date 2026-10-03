@@ -6,7 +6,7 @@
   --fg-primary: #000000;
   --icon-primary: #aaa;
   --bg-secondary: #fff;
-  --fg-secondary: #333;
+  --fg-secondary: #666;
   --fg-placeholder: rgba(0, 0, 0, 0.54);
   --search-text: var(--fg-primary);
   --link-primary: #1a5fb4;
@@ -34,7 +34,7 @@ body[data-theme='light'] {
   --fg-primary: #000000;
   --icon-primary: #aaa;
   --bg-secondary: #fff;
-  --fg-secondary: #333;
+  --fg-secondary: #666;
   --fg-placeholder: rgba(0, 0, 0, 0.54);
   --search-text: var(--fg-primary);
   --link-primary: #1a5fb4;
