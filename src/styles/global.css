@@ -7,6 +7,7 @@
   --icon-primary: #aaa;
   --bg-secondary: #fff;
   --fg-secondary: #333;
+  --fg-placeholder: rgba(0, 0, 0, 0.54);
   --border-primary: #ccc;
 }
 
