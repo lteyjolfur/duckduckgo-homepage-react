@@ -5,14 +5,28 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="DuckDuckGo clone" />
-    <meta name="application-name" content="DuckDuckGo Clone" />
+    <meta name="description" content="DuckDuckGo-inspired search homepage" />
+    <meta name="application-name" content="DuckDuckGo " />
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="preload" as="image" href="/logo192.png" fetchpriority="high" />
     <link rel="manifest" href="/manifest.json" />
-    <title>DuckDuckGo Clone</title>
-    <script type="module" crossorigin src="/assets/index-De-pxFac.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CMmf8fbr.css" />
+    <title>DuckDuckGo-inspired search homepage</title>
+    <script>
+      (function () {
+        try {
+          const saved = localStorage.getItem('theme');
+
+          const prefersDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+
+          document.documentElement.dataset.theme =
+            saved || (prefersDark ? 'dark' : 'light');
+        } catch {}
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/index-DhQCHxcb.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CpoMecll.css">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
