@@ -25,7 +25,9 @@ function readInitialTheme(): Theme {
   try {
     const stored = localStorage.getItem(THEME_KEY);
     if (isTheme(stored)) return stored;
-  } catch (e) {}
+  } catch {
+    // storage unavailable (e.g. private mode); fall through
+  }
   // the inline script in index.html resolves saved/system theme onto <html>
   const rootAttr = document.documentElement.dataset.theme;
   if (isTheme(rootAttr)) return rootAttr;
@@ -39,7 +41,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useLayoutEffect(() => {
     try {
       localStorage.setItem(THEME_KEY, theme);
-    } catch (e) {}
+    } catch {
+      // storage unavailable; the theme still applies for this session
+    }
     document.documentElement.dataset.theme = theme;
     document.body.setAttribute('data-theme', theme);
   }, [theme]);

@@ -48,7 +48,7 @@ const Dropdown = ({ children }: React.PropsWithChildren) => {
     const items = menuRef.current?.querySelectorAll<HTMLAnchorElement>('a');
     if (!items || items.length === 0) return;
     const current = document.activeElement;
-    let idx = Array.from(items).indexOf(current as HTMLAnchorElement);
+    const idx = Array.from(items).indexOf(current as HTMLAnchorElement);
     if (e.key === 'ArrowDown') {
       e.preventDefault();
       const next = items[(idx + 1) % items.length];

@@ -29,9 +29,12 @@ export default function SideDrawer({
 
   useEffect(() => {
     if (open) {
+      // Mount first, then add the open class on the next tick so the CSS
+      // transition runs. Intentionally sequenced through state in an effect.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShouldRender(true);
-      // Wait for next tick to add open class for transition
-      setTimeout(() => setAnimateOpen(true), 10);
+      const timeout = setTimeout(() => setAnimateOpen(true), 10);
+      return () => clearTimeout(timeout);
     } else {
       setAnimateOpen(false);
       // Wait for the transition to finish before unmounting
