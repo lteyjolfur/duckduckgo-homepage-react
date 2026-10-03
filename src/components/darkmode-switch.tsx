@@ -16,7 +16,7 @@ export default function DarkmodeSwitch() {
       {isDark ? (
         <FiSun strokeWidth={3} />
       ) : (
-        <FiMoon className="moon" strokeWidth={3} />
+        <FiMoon strokeWidth={3} />
       )}{' '}
     </button>
   );
